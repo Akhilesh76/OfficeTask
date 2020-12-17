@@ -34,7 +34,7 @@ class Akhilesh():
         print(self.name)
         print(self.age)
 
-x = Akhilesh("chutiya",30)
+x = Akhilesh("mahaan",27)
 x.config()
 
 # Create two object and change the parameters of one object and compare that parameters between the objects?
