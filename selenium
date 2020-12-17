@@ -1,0 +1,13 @@
+Driver.title
+Driver.Current_url
+Driver.close()
+Driver.quit()
+Driver.maximize_window()
+Time.sleep()
+Driver.forward()
+Driver.back()
+Driver.implicitly_wait()
+Driver.switch_to.frame("frame name ")
+Driver.current_window_handle()
+Driver.save_screenshot("path ")
+Driver.assertEqual(expected,actual,text)
