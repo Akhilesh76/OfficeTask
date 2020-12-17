@@ -1,0 +1,254 @@
+class Akhilesh:
+    def config(self):
+        print("hello")
+
+x=Akhilesh()
+x.config()
+
+# print hello directly using class with init function?
+
+class Akhlesh()
+    def __init__(self):
+        print("Hello")
+
+x= Akhilesh()
+
+# print the parameters if params is passing in constructor without another def function?
+
+class Akhilesh():
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+x = Akhilesh("chutiya",30)
+
+# print the parameters if params is passing in constructor with def function?
+
+class Akhilesh():
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+    def config(self):
+        print(self.name)
+        print(self.age)
+
+x = Akhilesh("chutiya",30)
+x.config()
+
+# Create two object and change the parameters of one object and compare that parameters between the objects?
+
+class Akhilesh():
+    def __init__(self,name,age):
+        self.name="chutiya"
+        self.age=30
+
+    def compare(self,other):
+        if self.age == other.age:
+            return True
+        else:
+            return False
+
+x1 = Akhilesh()
+x1.age = 32
+x2 = Akhilesh()
+if x1.compare(x2):
+    print("same")
+else:
+    print("Not same")
+
+# Pass the instant variable and static variable and print the output using two object so that static variable remain same?
+
+class Akhilesh:
+    # class variable
+    owner = "chutiya"
+    def __init__(self):
+        self.laptop = "lenovo"
+        self.price = 30000
+
+x1 = Akhilesh()
+x2 = Akhilesh()
+print(x1.laptop, x1.price, x1.owner)
+
+# print the average marks of two objects by passing the parameters in constructor?
+
+class Student():
+
+    def __init__(self,m1,m2,m3):
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+
+    def avg(self):
+        return (self.m1+self.m2+self.m3)/3
+
+
+s1 = Student(10,20,30)
+s2 = Student(20,30,50)
+
+print(s1.avg())
+print(s2.avg())
+
+# define a class variable and using info in def function print the value of class variable?hint-@classsmethod
+# Write a programme using class method and staticmethod?
+class Student():
+
+    school = "Himanshu"
+
+    def __init__(self,m1,m2,m3):
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+
+    def avg(self):
+        return (self.m1+self.m2+self.m3)/3
+    @classmethod
+    def info(cls):
+        return cls.school
+    @staticmethod
+    def info():
+        print("I m back")
+s1 = Student(10,20,30)
+s2 = Student(20,30,50)
+
+print(s1.avg())
+print(s2.avg())
+print(Student.info())
+Student.info()
+
+# Create a class laptop inside class student? and print the name,rollno,brand,cpu,ram using two objects?
+class Student:
+    def __init__(self,name,rollno):
+        self.name = name
+        self.rollno = rollno
+        self.lap = self.laptop()
+    def show(self):
+        print(self.name,self.rollno)
+
+    class laptop:
+
+        def __init__(self):
+            self.brand = "HP"
+            self.cpu = "i3"
+
+        def show(self):
+            print(self.brand,self.cpu)
+            self.lap.show()
+
+s1 = Student("Akhol",2)
+s2 = Student("Himanhu",99)
+s1.show()
+lap1 = s1.lap
+lap2 = s2.lap
+
+#  Write a programme using three class and third one is inheritting properties of upper both class?
+# Q13 Using the init function...Write a programme that class C inherit the property of class A and class B?
+
+class A:
+    def feature1(self):
+        print("1 working")
+
+class B(A):
+    super().feature1()
+    def feature2(self):
+        print("2 working")
+
+class C(B):
+    super().feature2()
+    def feature3(self):
+        print("3 workring")
+a = C()
+a.feature3()
+
+# Print the properties of class A using class B while passing an ide in arguement?
+class Pycharm:
+    def execute(self):
+        print("hi")
+
+class laptop:
+
+    def code(self,ide):
+        ide.execute()
+
+ide = Pycharm()
+x1 = laptop()
+x1.code(ide)
+
+# Write a programme to add,sub,mul using operator overloading?
+a = 2
+b = 5
+print(int.__add__(a,b))
+
+# Using operator method in def function add the first value and second value of both the objects? and compare both the objects?
+class Student:
+    def __int__(self,m1,m2):
+        self.m1=m1
+        self.m2=m2
+    def __add__(self, other):
+        m1 = self.m1+other.m1
+        m2 = self.m2+other.m2
+        s3 = Student(m1,m2)
+
+        return s3
+s1 =Student(20,30)
+s2 = Student(25,35)
+s3 =s1+s2
+
+print(s3.m1)
+
+# Create three variables in def function if anyone is empty leave that and add others?
+
+class Student:
+    def __init__(self,m1,m2):
+        self.m1=m1
+        self.m2=m2
+
+    def sum(self,a=None,b=None,c=None):
+        if a!=None and b!=None and c!=None:
+            s=a+b+c
+        elif a!=None and b!=None:
+            s=a+b
+        else:
+            s=a
+        return s
+s1= Student(49,51)
+print(s1.sum(4,9,6))
+
+# print hello and hi simultaneously using two classes?
+from threading import *
+from time import sleep
+class Hello(Thread):
+    def run(self):
+        for i in range(5):
+            print("Hello")
+            sleep(1)
+class Hi(Thread):
+    def run(self):
+        for i in range(5):
+            print("Hi")
+            sleep(1)
+x1=Hello()
+x2=Hi()
+x1.start()
+sleep(0.2)
+x2.start()
+
+# In linear search ....find a no from the list,,if found print found and at which position otherwise not found?
+
+def search(list,n):
+    i=0
+
+    while i<len(list):
+        if list[i]==n:
+            globals()["pos"]=i
+            return True
+        i=i+1
+
+    return False
+
+list = [6,112,13,24,21,8]
+n=21
+if search(list,n):
+    print("fount at",i)
+else:
+    print("not found")
