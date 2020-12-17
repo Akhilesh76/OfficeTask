@@ -1,0 +1,109 @@
+################1#what is python
+#ans# it is a very popular and high oriented programming language.
+#it was created by guido van rossum.
+#it was released in 1991.#it is a server site(web development) language.
+#it is a software developer language.
+
+
+#############Conditional Satements
+#1 equals(a==b)
+#2 not equal(a!=b)
+#3 less than(a<b)
+#4 gretaer than(a>b)
+#5 less than equal to(a<=b)
+#6 gretaer than equla to(a>=b)
+#7 modulus(a%b)
+#8 divide(a/b)
+#9 to get the value before decimel after division(a//b)
+#10 to get the nth power of digit(a**n)
+#11 to find the no in descending order use (n,0,-1)
+#12 for reverse of any string use n[::-1]
+#13 for make a single string of list use ("".join(n))
+
+
+
+
+
+#########Swapping no
+x,y=int(input("1st no")),int(input("2nd no"))
+y,x=x,y
+print(x,y)
+
+##########odd and even
+x=int(input("Enter rhe value : "))
+if x%2==0:
+    print(x," is even")
+else:
+    print(x," is odd")
+
+##########multiplication of any no.
+n=int(input())
+for x in range(1,11):
+    y=n*x
+    print(n," x ",x," = ",y)
+
+##########Fibonacci seriess
+n=int(input())
+first =0
+second=1
+for i in range(n):
+    print(first)
+    temp=first
+    first=second
+    second=temp+first
+
+#########armstrong##########
+for i in range(1001):
+    n=i
+    result=0
+    x=len(str(i))
+    while i!=0:
+        digit=i%10
+        result=result+digit**x
+        i=i//10
+    if n==result:
+        print(result)
+
+
+##########Factorial##########using def function
+def fact(n):
+    if n==0:
+        return 1
+    else:
+        return n*fact(n-1)
+n=int(input("Enter the value : "))
+result=fact(n)
+print("Factorial of ",n," is ",result)
+
+###########Factorial#######using for loop
+n=int(input("Enter the value : "))
+result=1
+for x in range(n,0,-1):
+    result=result*x
+print("Factorial of ",n,"is ",result)
+
+#########Factorial using While loop
+n=int(input("Enter the value : "))
+result=1
+while n!=0:
+    result=result*n
+    n=n-1
+print("Factorial of ",n,"is ",result)
+
+#########Prime no
+n=int(input("Enter the value : "))
+if n>1:
+    for x in range(2,n):
+        if n%x==0:
+            print(n," is not a prime no")
+            break
+    else:
+        print(n," is prime no")
+
+##########Palindrome
+n=str(input())
+x=n[::-1]
+if n==x:
+    print("Palindrome")
+else:
+    print("Not")
