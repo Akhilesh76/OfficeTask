@@ -21,7 +21,7 @@ class Akhilesh():
         self.name = name
         self.age = age
 
-x = Akhilesh("chutiya",30)
+x = Akhilesh("mahaan",27)
 
 # print the parameters if params is passing in constructor with def function?
 
