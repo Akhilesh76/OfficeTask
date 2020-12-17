@@ -1,0 +1,29 @@
+List:- Lists are used to store multiple items in a single variable.Lists are created using square brackets[]
+List items are ordered, changeable, and allow duplicate values. ordered means- new item at the end. changeable-can change, add remove items .dulpicatie- duplicate allow. A list can be different data type string("xyz"), in 40, boolean=true.
+* len(thislist) -items in a list
+*constructor(())= list(("a","b"))this is also a list
+*print(a[1]) gives second ,print(a[-1]) gives last,print(a[2:5]) range from 2 to 4, [:4] 0,1,2,3, [2:] 2 to end, [-4,-1] -4,-3,-2
+1=0
+2=1
+3=2
+* for change element a=[1,2,3,4]
+ a[1]=6 print(1,6,3,4)
+a=["annu","preeti,"akhil","jai","shashi"] for change a[1:3]=[s,t] print("annu","s","t","jai","shashi")
+* for add item at specified position insert- a= ["annu","preeti,"akhil","jai","shashi"] a.insert(2,""singh) ouput["annu","preeti,"akhil","singh","jai","shashi"]
+*for add item in end append()-a= ["annu","preeti,"akhil","jai","shashi"] a.append("singh") output ["annu","preeti,"akhil","jai","shashi","singh"]
+*append() elements from another list to the current list, use the extend() a=["annu","preeti,"akhil"] b=["jai","shashi","singh"] a.extend(b) output ["annu","preeti,"akhil","jai","shashi","singh"]
+*remove() method removes the specified item.a= ["annu","preeti,"akhil","singh","jai","shashi"] a.remove(""singh)output= ["annu","preeti,"akhil","jai","shashi"]
+*pop()removes the last item a.pop() output["annu","preeti,"akhil","jai","shashi"]
+* del can delete the list completely.del a[0] ["output "preeti,"akhil","jai","shashi"]                                         
+   
+   
+
+
+List is a collection which is ordered and changeable. Allows duplicate members.[] O,C,D        string,boolean,data
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members.() o,nc,d   string,boolean,data
+Set is a collection which is unordered and unindexed. No duplicate members.{}no,nc,nd
+Dictionary is a collection which is unordered and changeable. No duplicate members.
+
+Tuple- You can convert the tuple into a list, change the list, and convert the list back into a tuple.
+ a=  ("annu","preeti,"akhil","jai") y=list(x) y[1]="shashi"     print(x) output ["output "preeti,"akhil","jai","shashi"]       ASTERIX *
+ Tuple method count()	Returns the number of times a specified value occurs in a tuple| index()	Searches the tuple for a specified value and returns the position of where it was found 
