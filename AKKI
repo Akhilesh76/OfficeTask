@@ -1,3 +1,4 @@
+# print hello directly using class without init function?
 class Akhilesh:
     def config(self):
         print("hello")
