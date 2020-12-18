@@ -1,3 +1,8 @@
+cd\
+cd\xampp\mysql\bin
+d\xampp\mysql\bin>mysql -u root -p
+enter pasword:
+
 show databases;
 use Akhilesh;        # database ka name
 show tables;         # all tables like bonus,title,worker will show
@@ -18,7 +23,19 @@ select* from worker group by salary order by salary desc limit 1;
 select* from worker group by salary order by salary desc limit 1,1;   # for 2nd highest salary
 select department, sum(salary) from worker group by department;  # department salary wise
 select first_name,salary from worker where salary=(select max(salary) from worker);  # 2 peoples having highest salary
+select * from Worker where WORKER_ID = (SELECT max(WORKER_ID) from Worker);          # maximum worker_id
+select curdate();
+select now();
+SELECT * FROM Worker ORDER BY Salary DESC LIMIT 10                                   # 10 record of a table
 
 
 select count(worker_id) from worker group by department having count(worker_id)>2 order by count(worker_id) desc;                          
 select worker.first_name,worker.salary,title.worker_title from worker inner join title on worker.worker_id=title.worker_ref_id and title.worker_title="manager";
+
+SELECT CustId, CustName, CustAddress, CustPhone FROM worker
+INTERSECT                                                # common between two tables
+SELECT CustId, CustName, CustAddress, CustPhone FROM title
+
+SELECT * FROM dbtest02.dbo.article
+EXCEPT                                                 # Differences between two table
+SELECT * FROM dbtest01.dbo.article   
