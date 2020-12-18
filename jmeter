@@ -1,0 +1,9 @@
+
+listeners -  Listeners are the JMeter component that displays test results 1)Aggregate Report. ...2)Assertion Results. ...3)Backend Listener. ...4)BeanShell Listener. ...BSF Listener. ..FTP Request
+
+Samplers in JMeter -allows JMeter to send different types of requests to a server 1)HTTP Request 2)Java Request 3)SMTP Sampler -Mail Server where it sends email messages by using SMTP/SMTPS protocol.
+BSF Sampler
+JDBC Request- database testing.
+SOAP/XML RPC-Request
+
+-open jmeter,Add Thrread Group, Add sampler in thread group(http request), set the server name or IP or Port no(mozilla firefox),Method,Path,Add listeners,Start
