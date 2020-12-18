@@ -14,5 +14,11 @@ select concat(first_name,"_",last_name) from worker;
 select* from worker where first_name in("Akhilesh","rahul") # both 2 name will show
 select* from worker where first_name like "%%%%%h";
 select* from worker where year(joining_date)=2014 and month(joining_date)=2;
+select* from worker group by salary order by salary desc limit 1;
+select* from worker group by salary order by salary desc limit 1,1;   # for 2nd highest salary
+select department, sum(salary) from worker group by department;  # department salary wise
+select first_name,salary from worker where salary=(select max(salary) from worker);  # 2 peoples having highest salary
+
+
 select count(worker_id) from worker group by department having count(worker_id)>2 order by count(worker_id) desc;                          
 select worker.first_name,worker.salary,title.worker_title from worker inner join title on worker.worker_id=title.worker_ref_id and title.worker_title="manager";
