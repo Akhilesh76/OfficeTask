@@ -1,5 +1,6 @@
-show database;
-use office;
+show databases;
+use Akhilesh;        # database ka name
+show tables;         # all tables like bonus,title,worker will show
 
 select* from worker;
 select upper(first_name) from worker;
