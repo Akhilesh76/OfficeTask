@@ -36,6 +36,6 @@ SELECT CustId, CustName, CustAddress, CustPhone FROM worker
 INTERSECT                                                # common between two tables
 SELECT CustId, CustName, CustAddress, CustPhone FROM title
 
-SELECT * FROM dbtest02.dbo.article
+SELECT * FROM worker
 EXCEPT                                                 # Differences between two table
-SELECT * FROM dbtest01.dbo.article   
+SELECT * FROM title 
