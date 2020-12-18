@@ -1,13 +1,66 @@
-Driver.title
-Driver.Current_url
-Driver.close()
-Driver.quit()
-Driver.maximize_window()
-Time.sleep()
-Driver.forward()
-Driver.back()
-Driver.implicitly_wait()
-Driver.switch_to.frame("frame name ")
-Driver.current_window_handle()
-Driver.save_screenshot("path ")
-Driver.assertEqual(expected,actual,text)
+
+
+driver.current_url
+get                   # launches the url
+driver.switchTo().frame("a077aa5e");  find out the id of the iframe by inspecting through Firebug.
+driver.close()           #closes the current window while quit closes all windows in browser
+driver.quit()
+driver.maximize_window()
+*testng   is a framework Support for annotations *Support for data-driven testing *Flexible test configuration *Ability to re-execute failed test cases
+time.sleep()
+driver.forward()
+driver.back()
+driver.implicitly_wait()
+find elements () It returns a single WebElement and find element () , It returns a list of web elements.
+element.submit ()  for submit the form
+implicit wait *For the specified amount of time it will try looking for element again and again before throwing a NoSuchElementException. *explicit wait
+Thread.sleep () :  It will stop the current  thread for the specified period of time.
+SetSpeed () : integer format  For specific amount of time it will stop the execution for every selenium command. demonstration purpose it is used
+driver.switch_to.frame("frame name")
+driver.current_window_handle()            # all ids if window handle    chwnd= driver.window_handles   print("Total Windows : "+chwnd.size());
+driver.save_screenshot("path")
+driver.assertEqual(expected,actual,text)   #if both actual& expected result same,than assertion pass. true.
+A Hard Assertion is type of assertion that throws an exception immediately when an assert statement fails and continues with the next test in the test suite. while Soft Assert collects errors during @Test. Soft Assert does not throw an exception when an assert fails and would continue with the next step after the assert statement.
+If there is any exception and you want to throw it then you need to use assertAll() method as a last statement in the @Test and test suite again continue with next @Test as it is.
+public class SoftAssertion {
+ 
+	@Test
+	public void softAssert(){
+		SoftAssert softAssertion= new SoftAssert();
+		System.out.println("softAssert Method Was Started");
+		softAssertion.assertTrue(false);
+		System.out.println("softAssert Method Was Executed");
+	}
+	
+	@Test
+	public void hardAssert(){
+		System.out.println("hardAssert Method Was Started");
+		Assert.assertTrue(false);
+		System.out.println("hardAssert Method Was Executed");
+	}
+} 
+how to hadle alert  1)simple 2)prompt alert 3)confirmational alert
+1) void dismiss() // To click on the 'Cancel' button of the alert.
+
+driver.switchTo().alert().dismiss();
+2) void accept() // To click on the 'OK' button of the alert.
+
+driver.switchTo().alert().accept();
+3) String getText() // To capture the alert message.
+
+driver.switchTo().alert().getText();			
+4) void sendKeys(String stringToSend) // To send some data to alert box.
+
+driver.switchTo().alert().sendKeys("Text");
+Host parameters passed in selenium
+Port Number
+Browser
+URL
+# Explain what are the JUnits annotation linked with Selenium?
+@Before public void method() – It will perform the method () before each test, this method can prepare the test,@Test public void method() – Annotations @Test identifies that this method is a test method environment
+@After public void method()- To execute a method before this annotation is used, test method must start with test@Before
+
+# how you can login into any site if it’s showing any authentication popup for password and username?
+Pass the username and password with url
+Syntax-http://username:password@url
+ex- http://creyate:tom@www.gmail.com
